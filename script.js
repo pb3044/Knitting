@@ -407,10 +407,7 @@ function initContactForm() {
         submitButton.textContent = 'Sending...';
         
         // Template parameters for EmailJS
-        // Note: The recipient email (To Email) is configured in the EmailJS dashboard template settings.
-        // If your template uses {{to_email}} variable, it will use the value below.
-        // Otherwise, ensure the "To Email" field in template_b1l2l0a is set to: info@regalpartyrentals.ca
-        // Template expects: {{name}}, {{businessName}}, {{email}}, {{phone}}, {{province}}, {{serviceInterest}}, {{time}}, {{message}}
+        
         const templateParams = {
             name: name,
             businessName: '', // Optional field, can be added to form later
@@ -447,7 +444,7 @@ function initContactForm() {
                     if (error.text) {
                         errorMessage += ' Error: ' + error.text;
                     }
-                    errorMessage += ' Please try again or contact us directly at info@regalpartyrentals.ca';
+                    errorMessage += ' Please try again or contact us directly at Bimlacreationsmanali@gmail.com';
                     alert(errorMessage);
                     submitButton.disabled = false;
                     submitButton.textContent = originalButtonText;
@@ -458,7 +455,7 @@ function initContactForm() {
                 emailjsDefined: typeof emailjs !== 'undefined',
                 sendFunction: typeof emailjs !== 'undefined' ? typeof emailjs.send : 'N/A'
             });
-            alert('Email service is loading. Please try again in a moment or contact us directly at info@regalpartyrentals.ca');
+            alert('Email service is loading. Please try again in a moment or contact us directly at Bimlacreationsmanali@gmail.com');
             submitButton.disabled = false;
             submitButton.textContent = originalButtonText;
         }
@@ -913,3 +910,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
