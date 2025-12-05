@@ -385,14 +385,10 @@ function initContactForm() {
         
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
-        const phone = document.getElementById('phone').value.trim();
-        const eventDate = document.getElementById('eventDate').value;
-        const location = document.getElementById('location').value;
-        const eventType = document.getElementById('eventType').value;
-        const guestCount = document.getElementById('guestCount').value;
+        const subject = document.getElementById('subject').value.trim();
         const message = document.getElementById('message').value.trim();
         
-        if (!name || !email || !phone || !message) {
+        if (!name || !email || !message || !subject) {
             alert('Please fill in all required fields marked with *.');
             return;
         }
@@ -403,15 +399,7 @@ function initContactForm() {
             return;
         }
         
-        if (phone.length < 10) {
-            alert('Please enter a valid phone number.');
-            return;
-        }
-        
-        if (!location) {
-            alert('Please select an event location.');
-            return;
-        }
+      
         
         const submitButton = this.querySelector('button[type="submit"]');
         const originalButtonText = submitButton.textContent;
@@ -426,13 +414,10 @@ function initContactForm() {
         const templateParams = {
             name: name,
             businessName: '', // Optional field, can be added to form later
-            email: email, // Changed from from_email to match template
-            phone: phone,
-            province: location, // Changed from location to match template
-            serviceInterest: eventType || 'Not specified', // Changed from event_type to match template
-            time: eventDate || '', // New field matching template, can be formatted if needed
+            email: email, // Changed from from_email to match template          
+			subject:subject,
             message: message,
-            to_email: 'info@regalpartyrentals.ca'  // Only used if template "To Email" field uses {{to_email}}
+            to_email: 'bimlacreationsmanali@gmail.com'  // Only used if template "To Email" field uses {{to_email}}
         };
         
         if (emailjsLoaded && typeof emailjs !== 'undefined' && typeof emailjs.send === 'function') {
