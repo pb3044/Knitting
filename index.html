@@ -431,17 +431,21 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
-        .gallery-image {
-            width: 100%;
-            height: 300px;
-            background: linear-gradient(135deg, var(--secondary-color), var(--accent-green));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
-            transition: all 0.3s;
-        }
+.gallery-image {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.gallery-image i {
+    display: none; /* Hide the icon when image is added */
+}
         
         .gallery-item:hover .gallery-image {
             transform: scale(1.1);
@@ -747,7 +751,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <i class="fas fa-envelope"></i> <a href="mailto:Bimlacreationsmanali@gmail.com">Bimlacreationsmanali@gmail.com</a>                   
+                    <i class="fas fa-envelope"></i> <a href="mailto:bimlacreationsmanali@gmail.com">bimlacreationsmanali@gmail.com</a>                   
                 </div>
                 <div class="col-md-6 text-end">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -1075,9 +1079,8 @@
         <div class="row">
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="gallery-item">
-                    <div class="gallery-image">
-                        <i class="fas fa-hat-winter"></i>
-                    </div>
+                   <div class="gallery-image" style="background-image: url('images/toques.jpg');">
+        </div>
                     <div class="gallery-overlay">
                         <h5>Hand-Knit Toques</h5>
                         <p>Beautiful traditional designs crafted by skilled artisans</p>
@@ -1086,9 +1089,8 @@
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="gallery-item">
-                    <div class="gallery-image">
-                        <i class="fas fa-scarf"></i>
-                    </div>
+                     <div class="gallery-image" style="background-image: url('images/scarf.jpg');">
+        </div>
                     <div class="gallery-overlay">
                         <h5>Himalayan Scarves</h5>
                         <p>Warm and cozy scarves with traditional patterns</p>
@@ -1097,9 +1099,8 @@
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="gallery-item">
-                    <div class="gallery-image">
-                        <i class="fas fa-users"></i>
-                    </div>
+                     <div class="gallery-image" style="background-image: url('images/community.jpg');">
+        </div>
                     <div class="gallery-overlay">
                         <h5>Community</h5>
                         <p>Empowering women artisans in Manali</p>
@@ -1108,9 +1109,8 @@
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="gallery-item">
-                    <div class="gallery-image">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
+                   <div class="gallery-image" style="background-image: url('images/charity-giving.jpg');">
+        </div>
                     <div class="gallery-overlay">
                         <h5>Charity Giving</h5>
                         <p>Donations to women's shelters in Victoria</p>
@@ -1119,9 +1119,8 @@
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="gallery-item">
-                    <div class="gallery-image">
-                        <i class="fas fa-shipping-fast"></i>
-                    </div>
+                    <div class="gallery-image" style="background-image: url('images/global-reach.jpg');">
+        </div>
                     <div class="gallery-overlay">
                         <h5>Global Reach</h5>
                         <p>Connecting Manali to Victoria, connecting hearts</p>
@@ -1130,9 +1129,8 @@
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="gallery-item">
-                    <div class="gallery-image">
-                        <i class="fas fa-heart"></i>
-                    </div>
+                    <div class="gallery-image" style="background-image: url('images/fair-trade.jpg');">
+        </div>
                     <div class="gallery-overlay">
                         <h5>Fair Trade</h5>
                         <p>100% of proceeds directly to artisans</p>
@@ -1167,24 +1165,24 @@
             <div class="title-underline"></div>
             <p class="section-subtitle">We'd love to hear from you. Reach out anytime!</p>
         </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="contact-card">
-                    <i class="fas fa-envelope contact-icon"></i>
-                    <h4>Email Us</h4>
-                    <a href="mailto:Bimlacreationsmanali@gmail.com">Bimlacreationsmanali@gmail.com</a>
-                    <p style="color: #999; margin-top: 10px;">We respond within 24 hours</p>
-                </div>
-            </div>           
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="contact-card">
-                    <i class="fas fa-map-marker-alt contact-icon"></i>
-                    <h4>Our Office</h4>
-                    <p>Manali, Himachal Pradesh<br/>India</p>
-                    <p style="color: #999; margin-top: 10px;">Serving communities in Rural India.</p>
-                </div>
-            </div>
+<div class="row justify-content-center">
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="contact-card">
+            <i class="fas fa-envelope contact-icon"></i>
+            <h4>Email Us</h4>
+            <a href="mailto:Bimlacreationsmanali@gmail.com">Bimlacreationsmanali@gmail.com</a>
+            <p style="color: #999; margin-top: 10px;">We respond within 24 hours</p>
         </div>
+    </div>           
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="contact-card">
+            <i class="fas fa-map-marker-alt contact-icon"></i>
+            <h4>Our Office</h4>
+            <p>Manali, Himachal Pradesh<br/>India</p>
+            <p style="color: #999; margin-top: 10px;">Serving communities in Rural India.</p>
+        </div>
+    </div>
+</div>
         
         <!-- Contact Form -->
         <div class="row mt-5">
@@ -1228,12 +1226,12 @@
                         Bimla Creations
                     </h5>
                     <p>Empowering women artisans and building sustainable communities across continents.</p>
-                    <div class="social-links mt-3">
+                    <!-- <div class="social-links mt-3">
                         <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
                         <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
